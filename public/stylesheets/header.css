@@ -1,0 +1,142 @@
+header{
+    background-color: var(--colorCeleste);
+    height: 90px;
+}
+
+header .nav-search-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+header .logo img{
+    width: 60px;
+}
+
+header .buscador{
+    display: flex;
+    min-width: 30%;
+  
+    
+}
+
+header .buscador .search-bar{
+    flex-grow: 1;
+    
+}
+
+header .buscador .search-bar .buscar_texto{
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+header .buscador .search-bar .buscar_texto{
+    width: 100%;
+}
+
+header .buscador  .search button{
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+header .menu-head{
+    display: flex;
+}
+
+header .menu-head a{
+    margin-right: 15px;
+    font-size: 18px;
+    
+}
+
+header .menu-head .user-head{
+    display: none;
+}
+
+header a {
+   color: var(--colorBlanco);
+}
+
+
+
+header .searh-header{
+    display: flex;
+    flex-direction: column;
+    flex-grow: .7;
+    margin-right: 15px;
+}
+
+
+header .menu-bar ul{
+    display: flex;
+    display: none;
+}
+
+@media(min-width:670px){
+
+    header .menu-head .user-head{
+        display: inline-block;
+    } 
+    header .menu-head a{
+        margin: 0 20px;
+        
+    }
+
+    header .menu-head a{
+        justify-content: flex-end;
+    }
+}
+
+@media(min-width:1024px){
+    header{
+        height: 100px;
+    }
+
+    header .logo img{
+        width: 90px;
+    }
+
+    header .menu-head a{
+        margin: 0 40px;
+    }
+    
+    header .menu-head .menu-burguer{
+        display: none;
+    }
+
+    header .searh-header{
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    header .nav-search-header{
+        align-items: flex-start;
+    }
+
+    header .search-bar{
+        padding-top: 33px;
+    }
+
+    header .search{
+        padding-top: 33px;
+    }    
+    
+    header .menu-head{
+    padding-top: 34px;    
+    }
+
+    header .menu-bar ul{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+        font-size: 18px;
+        
+    }
+
+    header .nav-search-header {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+    }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- head -->
+  <%-include('./partials/head')%>
+
+<body class="detalle-producto">
+
+  <!--HEADER-->
+  <%-include('./partials/header')%>
+  
+  <!--MAIN-->
+  <main>
+    <!-- NAV DE CATEGORIAS-->
+    <div class="categorias">
+      <ul>
+        <a href="../">Home ›<li></li></a>
+        <a href="#">Tv y Video ›<li></li></a>
+        <a href="#">TV<li></li></a>
+      </ul>
+    </div>
+
+    <hr class="separador-uno">
+
+    <section class="detalleProducto">
+
+      <!-- CAROUSEL DEL PRODUCTO MOSTRADO EN MOBILE Y TABLET-->
+
+      <div class="carousel-detalleProducto">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="descuento"> <!--ETIQUETA DE DESCUENTO-->
+              <p><%= product.discount %>OFF%</p>
+            </div>
+
+            <div class="carousel-item active">
+              <img src="/images/detailProduct/<%= product.image[0] %>" class="d-block w-100" alt="Samsung Smart TV Crystal 43' 4K -img1">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/detailProduct/<%= product.image[1] %>" class="d-block w-100" alt="Samsung Smart TV Crystal 43' 4K -img2">
+            </div>
+            <div class="carousel-item">
+              <img src="/images/detailProduct/<%= product.image[2] %>" class="d-block w-100" alt="Samsung Smart TV Crystal 43' 4K -img3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <!--IMAGEN PRINCIPAL DEL PRODUCTO EN DESKTOP-->
+        
+        <div class="imagen-principal">
+          <img id="img-principal" src="/images/detailProduct/<%= product.image[0] %>" alt="">
+          <div class="descuento">
+            <p><%= product.discount %>OFF%</p>
+          </div>
+        </div>
+
+         <!--GALERIA DE IMAGENES SMALL ITEM DEL DESKTOP-->
+        <div class="img-items">
+
+        <%product.image.forEach(image => { %>
+          <img class="item" id="img-prev1" src="/images/detailProduct/<%= image %>" alt="" onclick="document.getElementById('img-principal').setAttribute('src','/images/detailProduct/<%=image%>')">
+        <%})%> 
+
+        </div>
+      </div>
+
+
+
+      <!-- TITULO/PRECIOS/BOTONES DE COMPRAR Y CARRITO/MEDIOS DE ENVIO Y METODO DE PAGO-->
+          <div class="descripcion">
+          <p class="titulo"><%= product.name %> </p>
+          <div class="descripcion-precio">
+          <span class="precio-regular">Precio regular:$<span><%= product.priceRegular %></span></span>
+          <span class="precio-online">Precio online:</span>
+          <span class="precio">$<%= product.price %></span>
+        </div>
+
+        <hr class="separador2">
+
+        <div class="boton-comprar">
+          <a href="./carrito.html">
+            <span class="comprar">comprar</span>
+          </a>
+        </div>
+
+        <div class="agregar-carrito">
+          <a href="#">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="carrito-detailProduct">Agregar al carrito</span>
+          </a>
+        </div>
+
+
+       
+          <table class="tabla-cuotas">
+            <tr class="fila1"><th>¡Aprovecha nuestras promociones bancarias!</th></tr>
+            <tr class="fila2"><td><img class="visa" src="/images/detailProduct/visa-removebg-preview 1.png" alt="">12 cuotas sin interes de 2500$</td></tr>
+            <tr class="fila3"><td><img class="mastercard" src="/images/detailProduct/mastercard-removebg-preview 1.png" alt="">12 cuotas sin interes de 2500$</td></tr>
+            <tr class="fila4"><td><img class="naranja" src="/images/detailProduct/tarjeta naranja imagen 1.png" alt="">12 cuotas sin interes de 2500$</td></tr>
+            <tr class="fila5"><td><img class="american-express" src="/images/detailProduct/american_express-removebg-preview 1.png" alt="">12 cuotas sin interes de 2500$</td></tr>
+          
+        </table>
+      
+
+       <!--  <div class="tarjeta-envio">
+
+          <div class="envio">
+            <p><i class="fas fa-truck"></i></p>
+            <p class="gratis">Envios GRATIS solo para<b>CABA o GBA</b></pcla>
+          </div>
+
+
+          <div class="tarjeta">
+            <p><i class="fas fa-credit-card"></i></p>
+            <a class="cuotas" href="#">Conoce las cuotas con tu tarjeta</a>
+          </div>
+        </div>
+      </div> -->
+
+    </section>
+
+
+    <!--MENU ACORDEON DESPLEGABLE DE LA DESCRIPCION DEL PRODUCTO-->
+
+    <div class="fichaTecnica-descripcion">
+      <div class="accordion accordion-flush " id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <div class="descripcion-titulo">
+                <p><i class="fas fa-exclamation-circle"></i></p>
+                <p>Descripcion</p>
+              </div>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <h3>DESCRIPCION</h3>
+
+              <p><%= product.description %></p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <div class="fichaTecnica-titulo">
+                <p><i class="far fa-file-alt"></i></p>
+                <p>Ficha tecnica</p>
+              </div>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <% product.features.forEach(feature => { %>
+                    <li><%= feature %></li>
+                <% }) %>               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="separador3">
+
+    <!-- GALERIA GLIDER DE PRODUCTOS RECOMENDADOS-->
+
+    <section class="productos-recomendados">
+      <div class="productos">
+        <h3>Mira tambien</h3>
+        <!--SLIDER DE GLIDER-->
+        <div class="glider-contain">
+          <div class="glider-detail">
+            <% products.forEach(product => { %>
+              <a href="/product/detailProduct/<%= product.id %>">
+                <div class="container">
+                  <article class="tarjeta">
+                      <figure>
+                          <img src="/images/detailProduct/<%= product.image[0] %>">
+                      </figure>
+                    
+                      <div class="contenido">
+                        <h3><%= product.name %></h3>
+                        <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
+                        <p class="precio">$<%= product.price %></p>
+                        <div class="envio-gratis">
+                          <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                        </div>
+                        
+    
+                        <div class="descuento">
+                        <p><%= product.discount %>%OFF</p>
+                      </div>
+    
+                      </div>
+                  </article>
+                 </div>
+               </a>
+          <% }) %>
+
+          </div>
+          <button aria-label="Previous" class="glider-prev">«</button>
+          <button aria-label="Next" class="glider-next">»</button>
+          <div role="tablist" class="dots" id="dots"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!--FOOTER-->
+  <%-include('./partials/footer') %>
+
+
+  <!--LINK BOOTSTRAP-->
+  <%-include('./partials/scripts')%> 
+
+</body>
+
+</html>

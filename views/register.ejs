@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- head -->
+<%-include('./partials/head') %>
+
+<body class="register">
+
+  <!-- header -->
+  <%-include('./partials/header') %>
+
+  <main>
+    <div class="box-contain">
+      <h4>¡BIENVENIDO! COMPLETA TUS DATOS Y REGISTRATE.</h4>
+
+      <form action="" method="POST">
+
+        <!-- email -->
+        <div class="container-input">
+          <p>E-mail</p>
+          <input class="text" type="email" name="email">
+        </div>
+
+        <!-- nombre de usurio -->
+        <div class="container-input">
+          <p>Nombre de usuario</p>
+          <input class="text" type="text" name="name">
+        </div>
+
+        <!-- contraseña -->
+        <div class="container-input">
+          <p>Contraseña</p>
+          <input class="text" type="password" name="password" minlength="8">
+        </div>
+
+        <!-- confirmar contraseña -->
+        <div class="container-input">
+          <p>Confirmar contraseña</p>
+          <input class="text" type="password" name="confirm-pass" minlength="8">
+        </div>
+
+        <!-- Boton -->
+        <div class="box-button">
+          <button class="btn-registro" type="submit">Registrate</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!--footer-->
+  <%-include('./partials/footer') %>
+
+  <!--scripts-->
+  <%-include('./partials/scripts')%>
+  
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+[
+   {
+      "id": 1,
+      "name": "juan cabrera",
+      "email": "juanca41913651@gmail.com",
+      "password": "$2a$10$AEtdMOqAPM71u3kjCt5al.MFjp10kHxhn6NyTwnQpBy1/UFN6yyEq",
+      "avatar": "default.png",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "pepito",
+      "email": "pepe@gmail.com",
+      "password": "$2a$10$as3xYH85LTHnFk9JKA6UduyH.jkzih2CJTLKoxa/W7wmP77LHKGs2",
+      "avatar": "default.png",
+      "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "juanpi",
+      "email": "juanca@gmail.com",
+      "password": "$2a$10$lpZKmj/wMw7pdWRHj4oqx.gnBcTqdDjhKrE5gMbPPMRhQ6CAltwNq",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "messi",
+      "email": "lio@messi.com",
+      "password": "$2a$10$uF0WgXLODQfLvDsDW/kSH.5LnkJotoaCuhueyzLtdmoPeFWmKzsYy",
+      "avatar": "avatar-default.jpg",
+      "rol": "user"
+   }
+]

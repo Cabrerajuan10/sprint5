@@ -1,0 +1,378 @@
+.home{
+    background-color: var(--colorGris);
+    padding-bottom: 50px;
+}
+
+.home .banner img{
+    height: 200px;
+}
+
+.home .form-1, .form-2, .form-3 {
+    background-color: var(--colorCeleste);
+    width: 280px;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home .credit-card, .debit-card, .efectivo{
+    background-color: var(--colorBlanco);
+    width: 220px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home h5{
+    margin: 0;
+}
+
+.home .box-prom   i{
+    font-size: 40px;
+    padding: 20px;
+    background-color: var(--colorNaranja);
+    color: var(--colorBlanco);
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.home .box-prom .mobile i{
+    padding: 20px 32.5px;
+}
+
+.home .box-prom{
+    display: flex;
+    justify-content: space-around;
+}
+
+.home .box-prom1{
+    display: flex;
+    flex-direction: column;
+}
+
+.home .box-prom2{
+    display: flex;
+    flex-direction: column;
+}
+
+ .home article {
+    width: 93%;
+    margin: auto;
+    background-color: var(--colorBlanco);
+
+}
+
+.home .descripcion {
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.home .product{
+    padding: 10px;
+}
+
+.home .descripcion .precio{
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: var(--colorNaranja);
+}
+
+.home .descripcion .descuento{
+    font-size: 18px;
+    margin: 0;
+    color: var(--colorVerde);
+} 
+
+.home .categoria a{
+    background-color: var(--colorBlanco);
+    color: var(--colorCeleste);
+    padding: 10px;
+}
+
+.home .box-medios-de-pago{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.home .box-articles{
+    width: 100%;
+}
+
+.home .box-categorias .categoria{
+    border-radius: 30%;
+    width: 150px;
+    height: 150px;
+    padding:10px;
+}
+
+.home .box-product-interes{
+    width: 93%;
+    margin:auto;
+}
+
+.home .box-product-interes img{
+    width: 100%;
+}
+
+.home .box-product-interes .poduct-interes img{
+    margin-top: 15px;
+}
+
+
+.home h4.section{
+    margin-top: 40px;
+    margin-left: 7%;
+    font-size: 1.3rem;
+}
+
+
+
+
+/*!TARJETA DEL PRODUCTO*/
+.home .tarjeta-contenedor{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+   
+}
+
+.home .tarjeta{
+    width:100%;
+    height: 450px;
+    margin: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgb(0,0,0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+    position:relative;
+}
+
+.home .tarjeta:hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0, 0.4);
+    transform: translateY(-3%);
+}
+
+.home .tarjeta img{
+    width: 100%;
+    height: 236.44px;
+}
+
+.home .tarjeta .contenido{
+    padding: 15px;
+    text-align: center;
+
+}
+
+.home .tarjeta .contenido p {
+    height: 20px;
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.home .tarjeta .contenido h3{
+    height: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+.home .tarjeta .contenido .precio{
+    height: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+
+.home .ofertas-home{
+    margin-top: 30px;
+}
+
+.home .glider-ofertas{
+    margin-top: 30px;
+}
+
+.home .glider-ofertas a, .glider1 a {
+    text-decoration: none;
+}
+
+.home .tarjeta-contenedor .descuento {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+    border: solid 1px black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 14px;
+    position: absolute;
+    left: 60%;
+    top: 4%;
+    z-index: 2;
+}
+
+.home .tarjeta-contenedor .descuento p {
+    margin: auto;
+    color: #fff;
+    font-weight: 400;
+}
+
+.home .contenido .envio-gratis p {
+    font-size: 12px;
+
+}
+
+.home .contenido .envio-gratis p b {
+    color: var(--colorVerde);
+}
+
+.home .contenido .envio-gratis i {
+    margin-right: 2px;
+    color: var(--colorVerde);
+    border: solid 1px black;
+    border-radius: 50%;
+    padding: 3px;
+    width:23px;
+    height:23px;
+}
+
+.home .precio-regular{
+    display: inline-block;
+    margin-top: 10px;
+    height: 20px;
+    font-size: 12px;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+
+
+@media (min-width:670px){
+    .home .banner img{
+    height: 300px;
+    }
+
+    .home .box-prom   i{
+        font-size: 60px;
+        padding: 30px;
+        background-color: var(--colorNaranja);
+        color: var(--colorBlanco);
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+
+    .home .box-prom .mobile i{
+        padding: 30px 48.75px;
+    }
+
+    .home article {
+        width: 91%;
+    }
+
+    .home h4 {
+        font-size: 1.6rem;
+    }
+
+    .home .box-product-interes{
+        width: 97%;
+    }
+
+    .home .box-product-interes .poduct-interes{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home .box-product-interes .poduct-interes .product1{
+        background-color: var(--colorBlanco);
+        margin-top: 15px;
+    }
+
+    .home .box-product-interes .poduct-interes img{
+        width: 240px;
+    }
+
+    .home .box-product-interes .poduct-interes div {
+        width: 240px;
+    }
+
+    .home .box-product-interes .poduct-interes .product1 {
+        height: 240px;
+        padding-top: 66px;
+    }
+
+}
+
+
+
+
+@media(min-width:1024px){
+    .home .banner img{
+    height: 400px;
+    }
+
+    .home .box-prom   i{
+        font-size: 75px;
+        padding: 45px;
+        background-color: var(--colorNaranja);
+        color: var(--colorBlanco);
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+
+    .home .box-prom .mobile i{
+        padding: 45px 68.44px;
+    }
+
+    .home .box-prom1{
+        display: block;        
+    }
+
+    .home .box-prom2{
+        display: block;        
+    }
+    
+    .home .box-prom .laptop{
+        margin-right: 60px;
+    }
+
+    .home .box-prom .mobile{
+        margin-right: 70px;
+    }
+
+    .home article {
+        width: 89%;
+    }
+
+    .home .box-product-interes{
+        width: 98%;
+    }
+
+    .home .box-product-interes .poduct-interes img{
+        width:320px;
+    }
+
+    .home .box-product-interes .poduct-interes div {
+        width:320px;
+    }
+
+    .home .box-product-interes .poduct-interes .product1 {
+        height:320px;
+        padding-top: 88px;
+    }
+
+
+}

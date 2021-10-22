@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+:root{
+    --colorCeleste: #22B1D0;
+    --colorGris: #DCDCDC;
+    --colorNaranja: #F49B49;
+    --colorBlanco: #FFFFFF;
+    --colorGrisOscuro:#ABB7BA;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+
+button:hover{
+    cursor: pointer;
+}

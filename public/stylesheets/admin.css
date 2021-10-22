@@ -1,0 +1,11 @@
+:root{
+    --colorCeleste: #22B1D0;
+    --colorGris: #DCDCDC;
+    --colorNaranja: #F49B49;
+    --colorBlanco: #FFFFFF;
+    --colorVerde:rgb(7, 114, 7);
+}
+
+.product-admin{
+    background-color: var(--colorGris);
+}

@@ -1,0 +1,40 @@
+<header>
+  
+    <div class="nav-search-header">
+      <div class="logo"> <a href="/"><img src="/images/home/Logo C-E.png" alt=""></div></a> 
+
+      <div class="searh-header">
+        <div class="buscador">
+          <div class="search-bar"><input type="text" class="buscar_texto"></div>
+          <div class="search"><button type="submit"><i class="fas fa-search"></i></button> </div>
+
+        </div>
+
+        <div class="menu-bar">
+          <ul>
+            <li><a href="">Ofertas</a></li>
+            <li><a href="">Opotunidades</a></li>
+            <li><a href="">Ayuda</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-head">
+        <% if (locals.userLogin) { %>
+          <li><a class="user-head" href="../users/profile"><%= locals.userLogin.name %></a></li>
+          <li><a class="user-head" href="/users/logout">Cerrar sesión</a></li>
+          <li><a class="user-head" href="/users/profile">Mi perfil</a></li>
+          <% if (locals.userLogin.rol === 'admin') { %>
+            <a class="icon-admin" href="../admin"><i class="fas fa-users-cog"></i></a>
+          <% } %> 
+        <% }else{ %>
+        <a class="user-head" href="../users/login"><i class="fas fa-user"></i></a>
+        <a class="menu-burguer" href=""><i class="fas fa-bars"></i></a>
+        <a class="carrito-head" href="../product/carrito"><i class="fas fa-shopping-cart"></i></a>
+        <% } %>
+
+      </div>
+    </div>
+
+  </header>
+
+ 

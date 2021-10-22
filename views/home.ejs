@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- head -->
+  <%-include('./partials/head') %>
+
+<body>
+
+<!-- header -->
+  <%-include('./partials/header') %>
+
+  <main class="home">
+    <section class="banner">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/home/img-banner-mobile.webp" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/home/img2-banner-mobile.webp" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/home/img3-banner-mobile.webp" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- medios de pago -->
+    <div class="box-medios-de-pago">
+      <div class="glider-contain">
+        <div class="glider">
+          <div>
+            <div class="form-1">
+              <div class="credit-card">
+                <i class="fas fa-credit-card"></i>
+                <h5>Tarjeta de crédito</h5>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="form-2">
+              <div class="debit-card">
+                <i class="fas fa-credit-card"></i>
+                <h5>Tarjeta de débito</h5>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="form-3">
+              <div class="efectivo">
+                <i class="fas fa-money-bill"></i>
+                <h5>Efectivo</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button aria-label="Previous" class="glider-prev">«</button>
+      <button aria-label="Next" class="glider-next">»</button>
+      <div role="tablist" class="dots" id="dots"></div>
+    </div>
+
+    <!--munu-promociones -->
+    <div class="box-prom">
+      <div class="box-prom1">
+        <a class="laptop" href=""><i class="fas fa-laptop"></i></a>
+        <a class="tv" href=""><i class="fas fa-tv"></i></a>
+      </div>
+      <div class="box-prom2">
+        <a class="mobile" href=""><i class="fas fa-mobile-alt"></i></a>
+        <a class="game" href=""><i class="fas fa-gamepad"></i></a>
+      </div>
+    </div>
+
+    <!-- articles --> <!--PRODUCTOS DESTACADOS-->
+    <h4 class="section">PRODUCTOS DESTACADOS</h4>
+    <div class="box-articles">
+      <div class="glider-contain">
+        <div class="glider1">
+          <% products.forEach(product => { %> 
+            <% product.length <= 12 %>  
+           <a href="/product/detailProduct/<%= product.id %>">
+            <div class="tarjeta-contenedor">
+              <article class="tarjeta">
+                  <figure>
+                      <img src="/images/detailProduct/<%= product.image[0] %>">
+                  </figure>
+                
+                  <div class="contenido">
+                    <h3><%= product.name %></h3>
+                    <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
+                    <p class="precio">$<%= product.price %></p>
+                    <div class="envio-gratis">
+                      <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                    </div>
+                    
+
+                    <div class="descuento">
+                    <p><%= product.discount %>%OFF</p>
+                  </div>
+
+                  </div>
+              </article>
+             </div>
+           </a>
+          <% }) %>
+        </div>
+        <button aria-label="Previous" class="glider-prev" id="prev">«</button>
+        <button aria-label="Next" class="glider-next" id="next">»</button>
+        <div role="tablist" class="dots-products" id="dots-products"></div>
+      </div>
+    </div>
+
+
+    <!-- categorias -->
+    <h4 class="section">CATEGORIAS</h4>
+    <div class="box-categorias">
+      <div class="glider-contain">
+        <div class="glider2">
+          <div><img class="categoria" src="/images/home/img-categoria-celu.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-gaming.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-TV.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-audio.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-lavado.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-calefaccion.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-acces.car.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-computacion.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-heladeras.jpg" alt=""></div>
+          <div><img class="categoria" src="/images/home/img-categoria-peq.electros.jpg" alt=""></div>
+        </div>
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots-ofertas" id="dots-ofertas"></div>
+      </div>
+    </div>
+
+    <!--OFERTAS-->
+    <h4 class="section">OFERTAS IMPERDIBLES</h4>
+    <div class="box-articles">
+      <div class="glider-contain">
+        <div class="glider-ofertas">
+          <% ofertas.forEach(product => { %>
+           <a href="/product/detailProduct/<%= product.id %>">
+            <div class="tarjeta-contenedor">
+              <article class="tarjeta">
+                  <figure class="img-producto">
+                      <img src="/images/detailProduct/<%= product.image[0] %>">
+                  </figure>
+                
+                  <div class="contenido">
+                    <h3><%= product.name %></h3>
+                    <p class="precio-regular">Precio regular: $<%= product.priceRegular %></p>
+                    <p class="precio">$<%= product.price %></p>
+                    <div class="envio-gratis">
+                      <p><i class="fas fa-truck"></i>Envio <b>GRATIS</b> a CABA Y GBA</p>
+                    </div>
+                    
+
+                    <div class="descuento">
+                    <p><%= product.discount %>%OFF</p>
+                  </div>
+
+                  </div>
+              </article>
+             </div>
+            </a>
+           <% }) %>
+
+        </div>
+        <button aria-label="Previous" class="glider-prev" id="prev">«</button>
+        <button aria-label="Next" class="glider-next" id="next">»</button>
+        <div role="tablist" class="dots-of" id="dots-of"></div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!--   productos de interes -->
+    <h4 class="section">TE PUEDEN INTERESAR</h4>
+    <div class="box-product-interes">
+      <div><img src="/images/home/img-banner-product.jpg" alt=""></div>
+      <div class="poduct-interes">
+        <div class="product1"><img  src="/images/home/unnamed (1).jpg" alt=""></div>
+        <div class="product2"><img src="/images/home/Aspiradora Ultracomb AS-4201 1400w-500x500.png" alt=""></div>
+        <div class="product3"><img src="/images/home/audio.jpg" alt=""></div>
+      </div>
+    </div>
+
+  </main>
+
+  
+<!--footer-->
+  <%-include('./partials/footer')%>
+
+  <%-include('./partials/scripts')%>
+
+</body>
+
+</html>

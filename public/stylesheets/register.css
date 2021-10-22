@@ -1,0 +1,76 @@
+.register main{
+    background-color: var(--colorGris);
+    padding-bottom: 30px;
+}
+
+/* titulo del fomulario */
+.register main h4{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* contenedor formulario */
+.register main .box-contain {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 375px;
+}
+
+/* p input */
+.register main .box-contain p{
+    margin: 30px 0 3px ;
+    font-size: 12px;
+}
+
+/* input */
+.register main .box-contain input.text{
+    width: 100%;
+    border: none;
+}
+
+/* contenedor button */
+.register main .box-contain .box-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* button */
+.register main .box-contain .box-button .btn-registro{
+    background-color: var(--colorGrisOscuro);
+    border: none;
+    padding: 0px 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px 1px black;
+}
+.register main .box-contain .box-button .btn-registro:hover {
+    transform: scale(1.09);
+  }
+
+
+@media (min-width: 768px){
+    
+    /* titulo del fomulario */
+    .register main h4{
+        font-size: 20px;
+    }
+
+    /* p input */
+    .register main .box-contain p{
+        font-size: 15px;
+    }
+
+    /* button */
+    .register main .box-contain .box-button .btn-registro{
+        background-color: var(--colorGrisOscuro);
+        border: none;
+        padding: 0px 15px;
+        margin-top: 20px;
+        border-radius: 15px;
+        font-size: 17px;
+    }
+
+}

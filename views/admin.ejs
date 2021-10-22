@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head',{title : "Administración"}) %> 
+
+<body class="bg-light">
+  <%- include('./partials/header') %> 
+  <main class="container">
+    <div class="row">
+      <div class="col-12 mx-auto">
+        <div class="card shadow mt-5">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-12 col-md-2">
+                <%= title %>
+              </div>
+              <div class="col-12 col-md-4">
+               <form class="row" action="/product/search" method="GET">
+                 <div class="col-9">
+                  <input type="text" class="form-control" name="search" placeholder="Buscar producto...">
+                 </div>
+                 <button style="display:flex; justify-content: center;" class="col-3  btn btn-outline-info" type="submit">Buscar</button>
+               </form>
+               </div>
+               <div class="col-12 col-md-4">
+               <form class="row" action="/product/filter" method="GET">
+                <div class="col-9">
+                 <select name="category" class="form-select">
+                   <option value="" selected hidden>Filtrar por...</option>
+                   <% categories.forEach(category => { %>
+                    <option value="<%= category %>"><%= firstLetter(category) %></option>
+                   <% }) %>
+                 </select>
+                </div>
+                <button style="display:flex; justify-content: center;" class="col-3 btn btn-outline-info" type="submit">Filtrar</button>
+              </form>
+              </div>
+              <div class="col-12 col-md-2 text-end">
+                <div>
+                  <a class="btn btn-info " href="/product/add">Agregar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive" class="card-body">
+            <table class="table table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Descuento</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+               
+              </thead>
+              <tbody>
+                <% products.forEach((product,index) => { %>
+                  <tr>
+                    <th scope="row"><%= index + 1 %> </th>
+                    <td><img width="100" src="/images/detailProduct/<%= product.image[0] %>" alt=""></td>
+                    <td><%= product.name %></td>
+                    <td><%= product.price %></td>
+                    <td><%= product.discount %></td>
+                    <td><%= product.category %></td>
+                    <td class="d-flex justify-content-around">
+                      <a href="/product/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
+                      <div>
+                        <form action="/product/destroy/<%= product.id %>?_method=DELETE" method="POST">
+                          <button type="submit" class="btn btn-sm btn-danger" style="width: 35px;"><i class="fas fa-trash"></i></button>
+                        </form>
+                      </div>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </main>
+
+
+  <%-include('./partials/scripts')%> 
+</body>
+</html>

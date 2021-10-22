@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root{
+    --colorCeleste: #22B1D0;
+    --colorGris: #DCDCDC;
+    --colorNaranja: #F49B49;
+    --colorBlanco: #FFFFFF;
+    --colorVerde:rgb(7, 114, 7);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    list-style: none;
+
+}
+
+.detalle-producto {
+    background-color: var(--colorGris);
+}
+
+.detalle-producto .categorias ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0px;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+}
+
+.detalle-producto .categorias ul a {
+    text-decoration: none;
+    margin-right: 4px;
+    color: black;
+}
+
+
+
+.detalle-producto .separador-uno {
+    margin-top: 0px;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.detalle-producto .main-detalleProducto {
+    width: 100vw;
+}
+
+.detalle-producto .carousel-detalleProducto {
+    width: 90%;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.detalle-producto .carousel-inner {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    position: relative;
+}
+
+.detalle-producto .descripcion {
+    margin-left: 10px;
+}
+
+.detalle-producto .descuento {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+    color: var(--colorBlanco);
+    border: solid 1px black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 14px;
+    position: absolute;
+    left: 68%;
+    top: 7%;
+    z-index: 2;
+}
+
+.detalle-producto .descuento p {
+    margin: auto;
+}
+
+.detalle-producto .descripcion-precio {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.detalle-producto .precio {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.detalle-producto .titulo {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.detalle-producto .separador2 {
+    width: 97%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.detalle-producto .boton-comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--colorNaranja);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 18px;
+}
+
+.detalle-producto .agregar-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--colorNaranja);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px 2px rgb(168, 164, 164);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-size: 18px;
+}
+
+.detalle-producto .boton-comprar:hover {
+    background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
+    ;
+}
+
+.detalle-producto .agregar-carrito:hover {
+    background: linear-gradient(to right, #cf8642, #f3a15a, #c57a34);
+    ;
+}
+
+.detalle-producto .boton-comprar:active {
+    transform: scale(.9);
+}
+
+.detalle-producto .agregar-carrito:active {
+    transform: scale(.9);
+}
+
+.detalle-producto .boton-comprar a {
+    color: var(--colorBlanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.detalle-producto .agregar-carrito a {
+    color: var(--colorBlanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+.detalle-producto .tarjeta-envio {
+    display: flex;
+    width: 90%;
+    flex-wrap: nowrap;
+    height: 100px;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 1px black;
+    margin-left: 5px;
+    border-bottom: solid 1px black;
+    border: solid 1px black;
+    background-color: var(--colorBlanco);
+    padding-left: 15px;
+    font-size: 15px;
+
+}
+
+.detalle-producto .envio {
+    width: 100%;
+    height: 40%;
+}
+
+.detalle-producto .envio p {
+    display: inline-block;
+}
+
+.detalle-producto .envio p i {
+    width: 32px;
+    height: 32px;
+    border: solid 1px black;
+    border-radius: 50%;
+    padding: 7px;
+    color: rgb(7, 114, 7);
+    background-color: #ffffff;
+}
+
+
+
+
+.detalle-producto .gratis b {
+    color: rgb(7, 114, 7);
+    margin-left: 4px;
+}
+
+.detalle-producto .tarjeta {
+    width: 100%;
+    height: 40%;
+}
+
+.detalle-producto .tarjeta p {
+    display: inline-block;
+}
+
+.detalle-producto .tarjeta p i {
+    width: 32px;
+    height: 32px;
+    border: solid 1px black;
+    border-radius: 50%;
+    padding: 7px;
+    color: rgb(7, 114, 7);
+    background-color: var(--colorBlanco);
+}
+
+.detalle-producto .productos-recomendados {
+    margin-top: 30px;
+}
+
+.detalle-producto .separador3 {
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+
+.detalle-producto .menuAcordeon-detalleProducto {
+    width: 80%;
+    margin-top: 40px;
+}
+
+.detalle-producto .img-items {
+    display: none;
+}
+
+.detalle-producto .imagen-principal {
+    display: none;
+}
+
+.detalle-producto .imagen-principal {
+    display: none;
+}
+
+.detalle-producto .fichaTecnica-descripcion {
+    width: 90%;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+
+.detalle-producto .descripcion-titulo,
+.detalle-producto .fichaTecnica-titulo {
+    display: flex;
+    color: var(--colorBlanco);
+    justify-content: flex-start;
+
+}
+
+.detalle-producto .descripcion-titulo p i,
+.detalle-producto .fichaTecnica-titulo p i {
+    margin-right: 4px;
+    color: rgb(65, 62, 62);
+}
+
+.detalle-producto .accordion-button {
+    background: linear-gradient(to right, #22B1D0, #4bcbe7, #a2e8f8);
+
+}
+
+.detalle-producto .accordion-body {
+    background-image: url(../images/detailProduct/imagenFondo-descripcion.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+/*!TARJETAS ARTICULOS RECOMENDADOS*/
+.detalle-producto .container{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 10px;
+   
+}
+.detalle-producto .tarjeta{
+    width:100%;
+    height: 450px;
+    margin: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgb(0,0,0, 0.2);
+    cursor: pointer;
+    transition: all 400ms ease;
+    position:relative;
+}
+
+.detalle-producto .tarjeta:hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0, 0.4);
+    transform: translateY(-3%);
+}
+
+.detalle-producto .tarjeta img{
+    width: 100%;
+    height: 234.44px;
+}
+
+.detalle-producto .tarjeta .contenido{
+    padding: 15px;
+    text-align: center;
+
+}
+
+.detalle-producto .tarjeta .contenido p {
+    height: 20px;
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.detalle-producto .tarjeta .contenido h3{
+    height: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+.detalle-producto .tarjeta .contenido .precio{
+    height: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+}
+.detalle-producto .ofertas-home{
+    margin-top: 30px;
+}
+
+.detalle-producto .glider-detail{
+    margin-top: 30px;
+}
+
+.detalle-producto .glider-detail a{
+    text-decoration: none;
+}
+
+.detalle-producto .container .descuento {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+    border: solid 1px black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 14px;
+    position: absolute;
+    left: 60%;
+    top: 4%;
+    z-index: 2;
+}
+
+.detalle-producto .container .descuento p {
+    margin: auto;
+    color: #fff;
+    font-weight: 400;
+}
+
+.detalle-producto .contenido .envio-gratis p {
+    font-size: 12px;
+}
+
+.detalle-producto .contenido .envio-gratis p b {
+    color: var(--colorVerde);
+}
+
+.detalle-producto .contenido .envio-gratis i {
+    margin-right: 2px;
+    color: var(--colorVerde);
+    border: solid 1px black;
+    border-radius: 50%;
+    padding: 5px;
+    width:24px;
+    height:24px;
+}
+
+.detalle-producto .precio-regular{
+    font-size: 12px;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+/* TABLA DE CUOTAS*/
+
+
+.detalle-producto .tabla-cuotas{
+    width: 330px;
+    height: 350px;
+    margin-top:40px;
+    border: solid 1px black;
+    text-align: start;
+    font-weight: 600;
+    background-color: var(--colorBlanco);
+
+}
+
+.detalle-producto .tabla-cuotas, .fila2, .fila3, .fila4, .fila5{
+    height: 60px;
+  
+}
+
+.detalle-producto .tabla-cuotas th{
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    padding: 6px;
+    background: linear-gradient(to bottom, #22B1D0, #61d3ec, #8fdbec) ;
+}
+
+.detalle-producto .tabla-cuotas img{
+    width: 45px;
+    height: 45px;
+}
+.detalle-producto .tabla-cuotas .visa{
+    width: 80px;
+    height: 60px;
+}
+
+.detalle-producto .tabla-cuotas .mastercard{
+    width: 50px;
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.detalle-producto .tabla-cuotas .naranja{
+    width: 52px;
+    height: 47px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.detalle-producto .tabla-cuotas .american-express{
+    width: 77px;
+    height: 60px;
+    margin-left: 4px;
+}
+
+.detalle-producto .tabla-cuotas tr{
+    border: solid 1px black;
+}
+
+
+
+
+/* !TABLET */
+
+
+@media(min-width:481px) {
+    .detalleProducto {
+        width: 100%;
+    }
+
+    .detalle-producto .carousel-detalleProducto {
+        margin: auto;
+        width: 90%;
+    }
+
+    .detalle-producto .descripcion {
+        margin-left: 10px;
+    }
+
+    .detalle-producto .descuento {
+        display: flex;
+        width: 80px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+        color: var(--colorBlanco);
+        border: solid 1px black;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 14px;
+        position: absolute;
+        left: 75%;
+        top: 8%;
+        z-index: 2;
+    }
+
+    .detalle-producto .descuento p {
+        margin: auto;
+    }
+
+    .detalle-producto .precio-regular {
+        color: rgba(black, black, black, 0.5);
+        font-size: 13px;
+    }
+
+    .detalle-producto .precio-regular span {
+        text-decoration: line-through;
+        opacity: .5;
+    }
+
+    .detalle-producto .descripcion-precio h4 {
+        font-size: 29px;
+    }
+
+    .detalle-producto .tarjeta-envio {
+
+        font-size: 17px;
+    }
+
+    .detalle-producto .tabla-cuotas{
+        text-align: center;
+        width: 420px;
+        height: 370px;
+       margin-left: 10px;
+       font-size: 20px;
+    }
+}
+
+
+
+
+/* !DESKTOP */
+
+@media(min-width:769px) {
+    .detalleProducto {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .detalle-producto .carousel-detalleProducto {
+        width: 50%;
+    }
+
+    .detalle-producto .descripcion {
+        width: 50%;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .detalle-producto .descuento {
+        display: flex;
+        width: 80px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #22B1D0, #1fd2fa, #14b7db);
+        color: var(--colorBlanco);
+        border: solid 1px black;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        font-size: 14px;
+        position: absolute;
+        left: 75%;
+        top: 8%;
+        z-index: 2;
+    }
+
+    .detalle-producto .descuento p {
+        margin: auto;
+    }
+
+
+    .detalle-producto .descripcion-precio h4 {
+        font-size: 27px;
+    }
+
+    .detalle-producto .precio-regular {
+        color: rgba(black, black, black, 0.5);
+        font-size: 13px;
+    }
+
+    .detalle-producto .precio-regular span {
+        text-decoration: line-through;
+        opacity: .5;
+    }
+
+    .detalle-producto .precio {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .detalle-producto .descripcion-fichaTecnica {
+        display: none;
+    }
+
+    .detalle-producto .tarjeta-envio {
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .detalle-producto .boton-comprar,
+    .detalle-producto .agregar-carrito {
+        width: 50%;
+    }
+
+    .detalle-producto .slide {
+        display: none;
+    }
+
+    .detalle-producto .img-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 180px;
+        margin-top: 35px;
+        margin-left: 15px;
+
+
+    }
+
+    .detalle-producto .imagen-principal {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+    .detalle-producto #img-principal {
+        width: 400px;
+        height: 400px;
+
+
+    }
+
+    .detalle-producto .item {
+        width: 25%;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .detalle-producto .item:hover {
+        border: solid 1px var(--colorCeleste);
+        border-radius: 5px;
+        transform: scale(1.2);
+    }
+
+    .detalle-producto .tabla-cuotas{    
+        width: 350px;
+        height: 300px;
+        margin-top:50px;
+        border: solid 1px black;
+        text-align: start;
+        font-weight: 600;
+        font-size: 16px;
+        background-color: var(--colorBlanco);
+    
+    }
+
+}
+
+
+
+
+
+
+@media(max-width: 480px) {
+    .detalle-producto .precio-regular {
+        display: none;
+    }
+}
+
+@media(min-width:1250px) {
+    .detalle-producto .descripcion-precio h4 {
+        font-size: 38px;
+    }
+}
+
+@media(max-width: 355px) {
+    .detalle-producto .tarjeta-envio {
+        display: none;
+    }
+}
