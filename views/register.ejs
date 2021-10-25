@@ -2,7 +2,7 @@
 <html lang="es">
 
 <!-- head -->
-<%-include('./partials/head') %>
+<%-include('./partials/head',{title: 'Registro'}) %>
 
 <body class="register">
 
@@ -19,26 +19,35 @@
         <div class="container-input">
           <p>E-mail</p>
           <input class="text" type="email" name="email">
+          <!-- errors -->
+          <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
         </div>
 
         <!-- nombre de usurio -->
         <div class="container-input">
           <p>Nombre de usuario</p>
-          <input class="text" type="text" name="name">
+          <input class="text" type="text" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+          <!-- errors -->
+          <span class="text-danger"><%= locals.errores && errores.name ? errores.name.msg : null %></span>
         </div>
 
         <!-- contraseña -->
         <div class="container-input">
           <p>Contraseña</p>
           <input class="text" type="password" name="password" minlength="8">
+          <!-- errors -->
+          <span class="text-danger"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
         </div>
 
         <!-- confirmar contraseña -->
         <div class="container-input">
           <p>Confirmar contraseña</p>
-          <input class="text" type="password" name="confirm-pass" minlength="8">
+          <input class="text" type="password" name="password2" minlength="8">
+          <!-- errors -->
+          <span class="text-danger"><%= locals.errores && errores.password2 ? errores.password2.msg : null %></span>
         </div>
 
+        
         <!-- Boton -->
         <div class="box-button">
           <button class="btn-registro" type="submit">Registrate</button>

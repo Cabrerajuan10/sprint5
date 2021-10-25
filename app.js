@@ -7,6 +7,7 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const localUserCheck = require('./middlewares/localsUserCheck')
+const cookieCheck = require('./middlewares/cookieCheck')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,9 +27,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({
-  secret : "community" 
+  secret : "community",
+  resave : false,
+  saveUninitialized : true 
 }));
-app.use(localUserCheck)
+
+app.use(cookieCheck);
+app.use(localUserCheck);
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

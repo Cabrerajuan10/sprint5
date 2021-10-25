@@ -11,5 +11,5 @@ module.exports =[
         }else{
             return false
         }
-    }).withMessage('credenciales invalidas')
+    }).withMessage('Credenciales invalidas')
 ]

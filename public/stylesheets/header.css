@@ -73,6 +73,8 @@ header .menu-bar ul{
     display: none;
 }
 
+
+
 @media(min-width:670px){
 
     header .menu-head .user-head{
@@ -138,5 +140,9 @@ header .menu-bar ul{
         display: flex;
         justify-content: space-between;
         padding-top: 0;
+    }
+   
+    header .menu-head .user-head{
+        font-size:14px ;
     }
 }

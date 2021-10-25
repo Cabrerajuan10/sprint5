@@ -1,20 +1,21 @@
 const bcrypt = require('bcryptjs');
 const path = require ('path');
 const fs = require('fs');
-const users = require(path.join(__dirname,'../data/users.json'))
+let users = require(path.join(__dirname,'../data/users.json'))
 const {validationResult} = require('express-validator');
 
 module.exports = {
 
     register : (req,res) =>{
-        return res.render('register', {
-            title: "Registro"
-        })
+        return res.render('register')
     },
 
     processRegister : (req,res)=>{
        /*  return res.send(req.body) */
-        const {name,email,password} = req.body;
+       let errors = validationResult(req);
+
+       if(errors.isEmpty()){
+          const {name,email,password} = req.body;
 
         let user = {
             id : users.length != 0 ? users[users.length - 1].id + 1 : 1,
@@ -26,7 +27,24 @@ module.exports = {
         }
         users.push(user);
         fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
-        return res.redirect('/')
+
+
+        req.session.userLogin = {
+            id : user.id,
+            name : user.name,
+            avatar : user.avatar,
+            rol : user.rol
+        }
+
+
+        return res.redirect('/') 
+       }else{
+       return res.render('register',{
+                errores : errors.mapped(),
+                old : req.body
+            })
+       }
+        
     },
         
     login : (req,res) =>{
@@ -46,6 +64,9 @@ module.exports = {
                 avatar : user.avatar,
                 rol : user.rol
             }
+            if(req.body.remember){
+                res.cookie('communityElectro',req.session.userLogin,{maxAge : 1000 * 60})
+            }
             return res.redirect('/')
         }else{
             return res.render('login',{
@@ -57,5 +78,9 @@ module.exports = {
     logout : (req,res) =>{
         req.session.destroy()
         res.redirect('/')
+    },
+
+    profile : (req,res) =>{
+      return  res.render('profile')
     }
 } 
